@@ -1,0 +1,11 @@
+<div>
+  <div *ngIf="selectedProducts.length === 0">
+    <h2>No items in cart</h2>
+  </div>
+  <div *ngIf="selectedProducts.length !== 0" >
+    <h1>Cart:</h1>
+    <ul *ngFor="let it of selectedProducts">
+      <li>Action: {{ it.name }} - {{it.price}}</li>
+    </ul>
+  </div>
+</div>

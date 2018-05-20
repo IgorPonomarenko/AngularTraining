@@ -1,0 +1,13 @@
+<div>
+  <h4>{{product.name}}:</h4>
+  <ul style="list-style-type:disc">
+    <li>Details: {{product.description}}</li>
+    <li>Category: {{product.category}}</li>
+    <li>MPrice: {{product.price}}</li>
+  </ul>
+
+  <button type="button"
+          class="btn btn-primary"
+          (click)='onBuyProduct({"product": product})'>Buy Product</button>
+</div>
+<p> --------------------------------------------------------------------------- </p>
