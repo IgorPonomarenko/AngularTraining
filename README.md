@@ -1,6 +1,6 @@
 # SuperShop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 
 ## Implemented as part of task 1
  - (Subtask 4) Create `ProductComponent` component with properties and `enum`
@@ -11,8 +11,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Opened Questions:
 I've marked them with TODO tag
 1) When I click Buy button I send current product details to Cart service. But due to some reason I can not access product object fields e.g. product.name. At the same time I can see full Product details with all necessary fields when I print it to the log.
-2) I can not use get method on the model. Compiler says it's not a function
-  
+2) I can not use get method on the model. Compiler says it's not a function  
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -23,7 +23,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
