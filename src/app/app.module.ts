@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import {ProductsService} from "./products-service/products.service";
-import { CartComponent } from './cart/cart.component';
-import {CartService} from "./cart-service/cart.service";
+import { CartComponent } from './cart-module/cart/cart.component';
+import {CartService} from "./cart-module/cart-service/cart.service";
+import {CartModule} from "./cart-module/cart.module";
 
 
 @NgModule({
@@ -18,9 +19,10 @@ import {CartService} from "./cart-service/cart.service";
     CartComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    CartModule
   ],
-  providers: [ProductsService, CartService],
+  providers: [ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
