@@ -6,7 +6,7 @@ import {Subject} from "rxjs";
 export class CartService {
 
   private purchaseSubject = new Subject<Product>();
-  addedProduct = this.purchaseSubject.asObservable();
+  observablePurchase = this.purchaseSubject.asObservable();
 
   constructor() {
   }

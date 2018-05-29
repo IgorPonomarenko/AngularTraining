@@ -9,18 +9,11 @@ import {Product} from "../models/product.model";
 })
 export class CartComponent implements OnInit {
 
-  selectedProducts: Array<Product>;
-  constructor(private cartService: CartService) {
-    this.selectedProducts = new Array<Product>();
-  }
+  selectedProducts: Array<Product> = [];
+  constructor(private cartService: CartService) {}
 
   ngOnInit() {
-
-    this.cartService.addedProduct.subscribe( addedProduct => {
-      console.log('Chart Component: ', addedProduct);
-      console.log('Chart Component: ', addedProduct.name);
-      //TODO: why does it say that getName is not a function
-      //addedProduct.getName();
+    this.cartService.observablePurchase.subscribe(addedProduct => {
       this.selectedProducts.push(addedProduct);
       }
     )
