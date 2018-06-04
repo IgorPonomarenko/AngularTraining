@@ -1,12 +1,13 @@
 <div>
-  <h4>{{product.name}}:</h4>
+  <h4>{{product.product.name}}:</h4>
   <ul style="list-style-type:disc">
-    <li>Details: {{product.description}}</li>
-    <li>Category: {{product.category}}</li>
-    <li>MPrice: {{product.price}}</li>
+    <li>Details: {{product.product.description}}</li>
+    <li>Category: {{product.product.category}}</li>
+    <li>MPrice: {{product.product.price}}</li>
+    <li>Available quantity: {{product.quantity}}</li>
   </ul>
 
-  <button type="button"
+  <button [disabled]="product.quantity === 0" type="button"
           class="btn btn-primary"
           (click)='onBuyProduct(product)'>Buy Product</button>
 </div>

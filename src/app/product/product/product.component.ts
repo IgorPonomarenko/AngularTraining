@@ -1,6 +1,7 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {Product} from "../models/product.model";
-import {CartService} from "../cart-module/cart-service/cart.service";
+import {CartService} from "../../cart-module/cart-service/cart.service";
+import {Inventory} from "../models/inventory";
 
 @Component({
   selector: 'app-product',
@@ -10,17 +11,15 @@ import {CartService} from "../cart-module/cart-service/cart.service";
 export class ProductComponent implements OnInit {
 
   @Input()
-  product: Product;
+  product: Inventory;
 
   constructor(private cartService: CartService) { }
 
   ngOnInit() {
   }
 
-  onBuyProduct(product: Product){
-    this.cartService.addProduct(product);
-    //TODO Don't understand why it prints in log full product with all elements in first line and returns "underfined" instead of "product.name" on the second line
-    console.log('Product Component: ', product);
-    console.log('Product Component: ', product.name);
+  onBuyProduct(product: Inventory){
+    product.quantity = product.quantity -1;
+    this.cartService.addProduct(product.product);
   }
 }

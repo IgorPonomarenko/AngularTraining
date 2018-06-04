@@ -15,8 +15,4 @@ export class Product implements Item{
   this.isAvailable = isAvailable;
 }
 
- public getName(): string{
-   return this.name;
-}
-
 }

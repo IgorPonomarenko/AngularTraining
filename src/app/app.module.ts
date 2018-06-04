@@ -1,25 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-
-import { AppComponent } from './app.component';
-import { ProductComponent } from './product/product.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import {ProductsService} from "./products-service/products.service";
-import { CartComponent } from './cart-module/cart/cart.component';
-import {CartService} from "./cart-module/cart-service/cart.service";
+import {BrowserModule} from "@angular/platform-browser";
+import {NgModule} from "@angular/core";
+import {AppComponent} from "./app.component";
 import {CartModule} from "./cart-module/cart.module";
+import {ProductModule} from "./product/product.module";
+import {ProductsService} from "./product/products-service/products.service";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
-    ProductListComponent,
-    CartComponent
   ],
   imports: [
     BrowserModule,
+    ProductModule,
     CartModule
   ],
   providers: [ProductsService],

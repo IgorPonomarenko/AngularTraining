@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Subject} from "rxjs";
-import {Product} from "../../models/product.model";
+import {Product} from "../../product/models/product.model";
 
 @Injectable()
 export class CartService {
@@ -12,8 +12,6 @@ export class CartService {
   }
 
   addProduct(product: Product){
-    console.log("Cart Service ", product);
-    console.log("Cart Service ", product.name);
     this.purchaseSubject.next(product);
   }
 
