@@ -1,0 +1,9 @@
+<div class="row" [ngClass]="{'alert-danger': selectedProduct.product.price > 10000}">
+  <div class="col-4" appMouseHover>
+    <li>{{ selectedProduct.product.name }} - {{selectedProduct.product.price}}  x {{selectedProduct.quantity}}</li>
+  </div>
+  <div class="col-2 ">
+    <button type="button" class="btn btn-info" (click)='onDecreaseQuantity(selectedProduct)'>-</button>
+    <button type="button" class="btn btn-info  offset-md-1" (click)='onRemoveFromCart(selectedProduct)'>Remove</button>
+  </div>
+</div>

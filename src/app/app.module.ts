@@ -1,9 +1,9 @@
 import {BrowserModule} from "@angular/platform-browser";
 import {NgModule} from "@angular/core";
 import {AppComponent} from "./app.component";
-import {CartModule} from "./cart-module/cart.module";
+import {CartModule} from "./cart/cart.module";
 import {ProductModule} from "./product/product.module";
-import {ProductsService} from "./product/products-service/products.service";
+import {ProductsService} from "./product/services/products-service/products.service";
 
 
 @NgModule({

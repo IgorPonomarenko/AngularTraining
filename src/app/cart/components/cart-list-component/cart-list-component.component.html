@@ -1,0 +1,16 @@
+<div>
+  <div *ngIf="cartProducts.length === 0">
+    <h2>No items in cart</h2>
+  </div>
+  <div *ngIf="cartProducts.length !== 0" >
+    <h1>In cart:</h1>
+    <ul *ngFor="let item of cartProducts">
+      <app-cart-item [selectedProduct]="item"
+      (decreaseQuantity)="onDecreaseQuantity($event)"
+      (removeFromCart)="onRemoveFromCart($event)"
+      ></app-cart-item>
+    </ul>
+    <h3>Total in Cart: {{productsInCart}}</h3>
+    <h3>Total to pay: {{totalPrice}}</h3>
+  </div>
+</div>

@@ -2,11 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
 
-## Implemented as part of task 1
- - (Subtask 4) Create `ProductComponent` component with properties and `enum`
- - (Subtask 5) Add `Buy` button and onBuy event handler. Added functionality to add product into Cart
- - (Subtask 6) Create `Product Service`, `Product list component` and Product `model` inherited from interface
- - (Subtask 7) Create `Cart component`, which shows the list of procucts in cart OR Message that cart is empty
+## Implemented as part of hometask 2
+на мой взгляд все пункты ДЗ 2 выполнены, за исключением своей дополнительной функциональности
+ - приложение имеет несколько модулей включая shared
+ - ProductListComponent отображает товары. ProductComponent - презентационный компонент. При добавлении товара в корзину, доступный остаток товара уменьшается. При отсутствии товара кнопка покупки становиться неактивной.
+ - CartListComponent - отображает список товаров. СartItemComponent является презентационным. Существует возможность уменьшить количество купленных единиц товара или удалить товар из корзины.
+ - Взаимодействие между презентационным компонентом и родительским списком реализовано с помощью @Input(), @Output().
+ - Компонент ProductComponent реализует стратегию OnPush
+ - Используются хуки ngOnInit и ngAfterViewInit (ProductListComponent и ProductComponent при использовании @ViewChild)
+ - Стоит обработчие DOM ивентa "click", для обработки нажатию на кнопки
+ - CartService предоставляет данные о количестве товаров и общей сумму покупок 
+ - В качестве демо используется #variable (в ProductComponent при наведении курсором на название товара изменяет указатель на "pointer") и @ViewChildren (в ProductListComponent выводит список товаров в консоль)
+ - При наведении курсором на товар в корзине срабатывает директива из shared модуля MouseHoverDirective. @HostBinding - изменяет фон на желтый, @HostListener меняет курсор на 'not-allowed'. 
+ - ngClass используется в СartItemComponent устанавливая класс товара в 'alert-danger', если его цена превыщает 10 000.
+ - для удобства, елементы модулей экспортируются с помощью index.ts
+ 
 
 ## Development server
 
