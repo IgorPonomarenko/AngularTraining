@@ -8,7 +8,6 @@ import {ProductListComponent} from "./components/product-list/product-list.compo
     CommonModule
   ],
   exports: [
-    ProductComponent,
     ProductListComponent
   ],
   declarations: [

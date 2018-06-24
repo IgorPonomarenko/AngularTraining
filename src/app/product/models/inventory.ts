@@ -1,10 +1,10 @@
-import {Product} from "./product.model";
+import {ProductModel} from "./product.model";
 export class Inventory{
-  public product: Product;
+  public product: ProductModel;
   public quantity: number;
 
   constructor(
-    product: Product,
+    product: ProductModel,
     quantity: number
   ){
     this.product = product;

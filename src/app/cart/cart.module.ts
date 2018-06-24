@@ -10,7 +10,7 @@ import {SharedModule} from "../shared/shared.module";
     CommonModule,
     SharedModule
   ],
-  exports: [CartListComponent, CartItemComponent],
+  exports: [CartListComponent],
   declarations: [CartListComponent, CartItemComponent],
   providers: [CartService]
 })

@@ -2,7 +2,7 @@ import {Component, OnInit, ViewChildren, QueryList, AfterViewInit} from "@angula
 import {ProductsService} from "../../services/products-service/products.service";
 import {Inventory} from "../../models/inventory";
 import {CartService} from "../../../cart/.";
-import {Product} from "../../models/product.model";
+import {ProductModel} from "../../models/product.model";
 import {ProductComponent} from "../product/product.component";
 
 @Component({

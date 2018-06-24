@@ -1,5 +1,5 @@
-import {Item} from "./product";
-export class Product implements Item{
+import {Item} from "./product.interface";
+export class ProductModel implements Item{
 
   constructor(
   public name: string,
@@ -7,12 +7,6 @@ export class Product implements Item{
   public price: number,
   public category: string,
   public isAvailable: boolean
-){
-  this.name = name;
-  this.description = description;
-  this.price = price;
-  this.category = category;
-  this.isAvailable = isAvailable;
-}
+){}
 
 }

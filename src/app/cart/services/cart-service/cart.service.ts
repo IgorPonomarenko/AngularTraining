@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Subject} from "rxjs";
-import {Product} from "../../../product/.";
+import {ProductModel} from "../../../product/.";
 import {Inventory} from "../../../product/models/inventory";
 
 @Injectable()
@@ -12,7 +12,7 @@ export class CartService {
   constructor() {
   }
 
-  addProduct(product: Product, quantity: number){
+  addProduct(product: ProductModel, quantity: number){
     let isProductInCart = false;
 
     this.cartProducts.forEach(item => {
@@ -27,7 +27,7 @@ export class CartService {
     this.purchaseSubject.next();
   }
 
-  decreaseCount(product: Product){
+  decreaseCount(product: ProductModel){
     this.cartProducts.forEach(item => {
       if(item.product === product && item.quantity > 0){
         item.quantity --;
@@ -39,7 +39,7 @@ export class CartService {
     this.purchaseSubject.next();
   }
 
-  removeFromCart(product: Product){
+  removeFromCart(product: ProductModel){
     let itemToRemove = this.cartProducts.find(item => item.product === product);
     if (itemToRemove) {
       this.cartProducts.splice(this.cartProducts.indexOf(itemToRemove),1);

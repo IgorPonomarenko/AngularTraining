@@ -1,5 +1,5 @@
 import {Component, OnInit, Input, Output, EventEmitter, HostListener, ChangeDetectionStrategy} from '@angular/core';
-import {Product} from "../../../product/models/product.model";
+import {ProductModel} from "../../../product/models/product.model";
 import {Inventory} from "../../../product/models/inventory";
 import {MouseHoverDirective} from "../../../shared/mouse-hover.directive"
 
